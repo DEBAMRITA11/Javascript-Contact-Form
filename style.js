@@ -23,9 +23,9 @@ submitButton.addEventListener("click", function(e) {
         const emailInput = document.getElementById("email-address");
         const addressInput = document.getElementById("full-address");
         
-        const nameValue = nameInput.Value;
-        const emailValue = emailInput.Value;
-        const addressValue = addressInput.Value;
+        const nameValue = nameInput.value;
+        const emailValue = emailInput.value;
+        const addressValue = addressInput.value;
         
         const errorText = document.getElementById("error-text");
         const formData = document.getElementById("form-data");
@@ -35,9 +35,10 @@ submitButton.addEventListener("click", function(e) {
             Email Address: ${emailValue},
             Address: ${addressValue} </p>`;
             errorText.innerHTML = "";
-            nameInput.Value = "";
-            emailInput.Value = "";
-            addressInput.Value = "";
+            console.log(nameValue, emailValue, addressValue);
+            nameInput.value = "";
+            emailInput.value = "";
+            addressInput.value = "";
         } else {
              errorText.innerHTML = '<p class="text-warning">Please fill the form</p>';
              formData.innerHTML = "";
